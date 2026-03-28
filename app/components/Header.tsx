@@ -1,8 +1,17 @@
+import Image from "next/image";
+
 export default function Header() {
   return (
     <header className="landingHeader">
       <div className="landingBrand">
-        <span className="landingBrandIcon">✦</span>
+        <span className="landingBrandIcon">
+          <Image 
+  src="/images/logo.png" 
+  alt="logo" 
+  width={80} 
+  height={80} 
+/>
+        </span>
       </div>
       <nav className="landingNav">
         <a href="#services" className="landingNavLink">

@@ -11,7 +11,9 @@ const teamMembers = [
     name: "FOUNDER",
     role: "X",
     style: "aboutAvatarFounder",
+    class:"aboutAvatarFounderClass",
     social: "x",
+    icon: "images/team_b.png"
   },
   {
     id: "right",
@@ -33,12 +35,11 @@ export default function AboutUs() {
 
       <div className="aboutGrid">
         {teamMembers.map((member) => (
-          <article key={member.id} className="aboutCard">
+          <article key={member.id} className={`aboutCard ${member?.class}`}>
             <div className={`aboutAvatar ${member.style}`}>
-              {member.id === "center" ? (
+              {member.icon ? (
                 <>
-                  <div className="aboutFounderTop">ALAOUI</div>
-                  <div className="aboutFounderBottom">CAPITAL</div>
+                <img src={member.icon} />
                 </>
               ) : null}
             </div>

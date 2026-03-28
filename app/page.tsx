@@ -8,8 +8,7 @@ import WhoWe from "./components/WhoWe";
 export default function Home() {
   return (
     <main className="landingPage">
-      <div className="landingBgGlow" />
-      <div className="landingBgNoise" />
+      <div className="landing-hero">
 
       <div className="landingContainer">
         <Header />
@@ -29,49 +28,73 @@ export default function Home() {
               Web3 growth engine to turn attention into viral growth
             </p>
 
-            <button type="button" className="landingCta">
-              Connect With Us
-            </button>
+
           </div>
 
-          <aside className="landingPartners">
+
+        </section>
+        <section className="landingStatsWrap-main">
+          <div className="landing-info landing-info-left landingStatsWrap">
+            <div className="landingStats">
+              <p>
+                <span className="landingStatValue">100M+</span>{" "}
+                <span className="landingStatLabel">SOCIAL MEDIA IMPRESSIONS</span>
+              </p>
+              <p>
+                <span className="landingStatValue">50+</span>{" "}
+                <span className="landingStatLabel">STRATEGIC PARTNERS</span>
+              </p>
+              <p>
+                <span className="landingStatValue">5+</span>{" "}
+                <span className="landingStatLabel">YEARS OF WEB 3.0 EXPERIENCE</span>
+              </p>
+            </div>
+
+            
+
+          </div>
+          <div className="landing-info landing-info-middle">
+              <button type="button" className="landingCta">
+                Connect With Us
+              </button>
+              <div className="landingScrollArea">
+                <div className="landingArrow">↓</div>
+                <p className="landingScrollText">Scroll To Explore</p>
+              </div>
+            </div>
+          <aside className="landing-info landing-info-right ">
+            <div className="landingPartners">
             <p className="landingPartnersTitle">
               OUR PARTNERS
             </p>
             <div className="landingPartnersGrid">
-              {["∞", "◐", "◍", "S", "△", "◈"].map((logo) => (
-                <div key={logo} className="landingPartnerLogo">
-                  {logo}
+                <div  className="landingPartnerLogo">
+                  <img src={'/images/partner_1.png'} />
                 </div>
-              ))}
+                <div  className="landingPartnerLogo">
+                  <img src={'/images/partner_2.png'} />
+                </div>
+                <div  className="landingPartnerLogo">
+                  <img src={'/images/partner_3.png'} />
+                </div>
+                <div  className="landingPartnerLogo">
+                  <img src={'/images/partner_4.png'} />
+                </div>
+                <div  className="landingPartnerLogo">
+                  <img src={'/images/partner_5.png'} />
+                </div>
+                <div  className="landingPartnerLogo">
+                  <img src={'/images/partner_6.png'} />
+                </div>
             </div>
             <p className="landingPartnersFooter">
-              AND MANY MORE...
+              And many more...
             </p>
+            </div>
           </aside>
         </section>
-
-        <div className="landingStatsWrap">
-          <div className="landingStats">
-            <p>
-              <span className="landingStatValue">100M+</span>{" "}
-              <span className="landingStatLabel">SOCIAL MEDIA IMPRESSIONS</span>
-            </p>
-            <p>
-              <span className="landingStatValue">50+</span>{" "}
-              <span className="landingStatLabel">STRATEGIC PARTNERS</span>
-            </p>
-            <p>
-              <span className="landingStatValue">5+</span>{" "}
-              <span className="landingStatLabel">YEARS OF WEB 3.0 EXPERIENCE</span>
-            </p>
-          </div>
-
-          <div className="landingScrollArea">
-            <div className="landingArrow">↓</div>
-            <p className="landingScrollText">Scroll To Explore</p>
-          </div>
-        </div>
+    </div>
+</div>
 
         <div className="landingWaves">
           <svg viewBox="0 0 1440 300" className="landingWavesSvg">
@@ -95,7 +118,6 @@ export default function Home() {
         <AboutUs />
         <FAQ />
         <Footer />
-      </div>
     </main>
   );
 }

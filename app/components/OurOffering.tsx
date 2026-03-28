@@ -1,52 +1,52 @@
 export default function OurOffering() {
   const offeringCards = [
     {
-      icon: "✦",
+      icon: "/images/offering_1.png",
       title: "Alaoui Audit",
       description:
-        "We offer strategic advisory services to navigate the complexities of blockchain marketing and Web3 growth.",
+        "We offer strategic advisory services to navigate the complexities of blockchain marketing, NFT growth, and Web3 strategies.",
     },
     {
-      icon: "📣",
+      icon: "/images/offering_2.png",
       title: "Influencer Marketing",
       description:
-        "We create targeted Web3 influencer campaigns that build trust, visibility, and user engagement.",
+        "We create targeted Web3 influencer marketing campaigns that amplify visibility, credibility, and user engagement.",
     },
     {
-      icon: "📈",
+      icon: "/images/offering_3.png",
       title: "X Boost",
       description:
-        "Boost follower growth and maximize campaign impact with high-performing X strategies.",
+        "Boost follower growth and maximize campaign impact.",
     },
     {
-      icon: "◎",
+      icon: "/images/offering_4.png",
       title: "Social Media Management",
       description:
-        "End-to-end social media management focused on awareness, community, and conversions.",
+        "We strategically manage your Web3 social media channels to drive engagement, awareness, and community growth.",
     },
     {
-      icon: "↗",
+      icon: "/images/offering_5.png",
       title: "Investment / KOLs Round",
       description:
-        "We structure investor and KOL rounds with strategic positioning and execution support.",
+        "Structured investment in Web3 startups after institutional-grade due diligence.",
     },
     {
-      icon: "🤝",
+      icon: "/images/offering_6.png",
       title: "Partnership Management",
       description:
-        "Build meaningful Web3 partnerships aligned with your project's long-term growth goals.",
+        "We establish strategic blockchain partnerships aligned with your project's long-term growth objectives.",
     },
     {
-      icon: "◫",
+      icon: "/images/offering_7.png",
       title: "Design",
       description:
-        "User-centric brand and product design crafted for modern Web3 communities and products.",
+        "Our experienced design team delivers captivating visual identities, UI/UX, and marketing assets optimized for blockchain, NFT, and Web3 audiences.",
     },
     {
-      icon: "</>",
+      icon: "/images/offering_8.png",
       title: "Development",
       description:
-        "Technical execution for landing pages, NFT flows, and growth-focused product experiences.",
+        "We provide technical expertise to build, launch, and scale blockchain-based projects, NFT platforms, and decentralized applications.",
     },
   ];
 
@@ -60,7 +60,9 @@ export default function OurOffering() {
       <div className="offeringGrid">
         {offeringCards.map((card) => (
           <article key={card.title} className="offeringCard">
-            <div className="offeringCardIcon">{card.icon}</div>
+            <div className="offeringCardIcon">
+              <img src={card.icon} alt={card.icon} />
+            </div>
             <h3 className="offeringCardTitle">{card.title}</h3>
             <p className="offeringCardDescription">{card.description}</p>
           </article>
