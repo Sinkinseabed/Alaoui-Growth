@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
+import ClientReview from "./components/ClientReview";
 import ControlLiquidity from "./components/ControlLiquidity";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
@@ -118,6 +119,7 @@ export default function Home() {
         <OurOffering />
         <WhoWe />
         <AboutUs />
+        <ClientReview />
         <FAQ />
         <ControlLiquidity />
 
