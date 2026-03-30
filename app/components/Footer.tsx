@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="footerInner">
         <div className="footerBrand">
           <div className="footerLogoMark" aria-hidden="true">
-            ✦
+            <img src="/images/logo.png" />
           </div>
           <div className="footerBrandText">
             <p className="footerBrandName">Alaoui Growth</p>
@@ -32,10 +32,11 @@ export default function Footer() {
 
         <div className="footerSocial">
           <a className="footerSocialBtn" href="#" aria-label="X">
-            X
+            <img src="/images/social_1.png" />
           </a>
           <a className="footerSocialBtn" href="#" aria-label="Telegram">
-            ↗
+                        <img src="/images/social_2.png" />
+
           </a>
         </div>
       </div>

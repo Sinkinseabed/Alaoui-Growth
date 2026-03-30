@@ -54,7 +54,7 @@ export default function OurOffering() {
     <section className="offeringSection" id="services">
       <div className="offeringHeader">
         <h2 className="offeringTitle">OUR OFFERINGS</h2>
-        <p className="offeringSubTitle">ONE STOP SOLUTION FOR EVERYTHING WEB3</p>
+        <p className="offeringSubTitle">One stop solution for everything web3.0</p>
       </div>
 
       <div className="offeringGrid">

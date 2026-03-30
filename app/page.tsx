@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
+import ControlLiquidity from "./components/ControlLiquidity";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import OurOffering from "./components/OurOffering";
@@ -58,7 +59,7 @@ export default function Home() {
                 Connect With Us
               </button>
               <div className="landingScrollArea">
-                <div className="landingArrow">↓</div>
+                <div className="landingArrow"><img src="/images/arrow.png"/></div>
                 <p className="landingScrollText">Scroll To Explore</p>
               </div>
             </div>
@@ -113,10 +114,13 @@ export default function Home() {
           </svg>
         </div>
 
+
         <OurOffering />
         <WhoWe />
         <AboutUs />
         <FAQ />
+        <ControlLiquidity />
+
         <Footer />
     </main>
   );

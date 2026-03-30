@@ -27,6 +27,7 @@ const teamMembers = [
 export default function AboutUs() {
   return (
     <section className="aboutSection" id="team">
+      <div className="wrapper">
       <h2 className="aboutTitle">
         A LITTLE
         <br />
@@ -49,6 +50,7 @@ export default function AboutUs() {
             <p className="aboutSocial">{member.role || member.social}</p>
           </article>
         ))}
+      </div>
       </div>
     </section>
   );

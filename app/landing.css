@@ -28,7 +28,13 @@
 
 body {
   font-family: "Neue Machina";
-
+}
+.wrapper {
+  width: 1280px;
+  margin: auto;
+}
+button {
+  cursor: pointer;
 }
 
 .landingPage {
@@ -40,7 +46,8 @@ body {
 }
 .landing-hero {
   background-image: url('/images/hero_bg.png');
-  background-size: contain;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .landingBgGlow {
@@ -71,7 +78,7 @@ body {
   display: flex;
   min-height: 100vh;
   width: 100%;
-  max-width: 80rem;
+  max-width: 1280px;
   flex-direction: column;
   padding: 2rem 1.5rem 2rem;
 }
@@ -159,11 +166,19 @@ section.landingStatsWrap-main {
 .landingPartnerLogo {
   width: 50%;
 }
+
+.landing-info.landing-info-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .landingPartnersFooter {
   margin-top: 1rem;
   text-align: right;
   color: rgba(244, 241, 230, 0.6);
-  font-size: 0.75rem;
+  font-size: 15px;
   letter-spacing: 0.2em;
 }
 
@@ -201,15 +216,17 @@ section.landingStatsWrap-main {
 }
 
 .landingArrow {
-  margin-bottom: 0.75rem;
-  color: rgba(244, 241, 230, 0.9);
-  font-size: 1.875rem;
+  width: fit-content;
+  margin: 40px auto;
 }
 
 .landingScrollText {
-  color: rgba(244, 241, 230, 0.7);
-  font-size: 0.875rem;
+  color: #fff;
+  font-size: 20px;
   letter-spacing: 0.02em;
+}
+.landingArrow img {
+    max-height: 75px;
 }
 
 .landingWaves {
@@ -315,8 +332,8 @@ margin: 0 15px;
 }
 
 .offeringCard {
-  width: calc(100%/3 - 25px);
-  margin: 12px;
+  width: calc(100%/3 - 40px);
+  margin: 20px;
   min-height: 13rem;
   border: 1px solid rgba(216, 193, 143, 0.3);
   border-radius: 0.6rem;
@@ -333,10 +350,13 @@ margin: 0 15px;
 }
 
 .offeringCardIcon {
-  margin-bottom: 0.8rem;
+  margin-bottom: 30px;
       display: flex;
     align-items: center;
     justify-content: center;
+}
+.offeringCardIcon img {
+    max-height: 150px;
 }
 
 .offeringCardTitle {
@@ -348,16 +368,16 @@ margin: 0 15px;
 
 .offeringCardDescription {
   margin: 0;
-  color: rgba(244, 241, 230, 0.62);
-  font-size: 0.74rem;
+  color: #A9A9A9;
+  font-size: 14px;
   line-height: 1.45;
 }
 
 .offeringFooterText {
   margin: 1.5rem 0 0;
   text-align: center;
-  color: rgba(244, 241, 230, 0.72);
-  font-size: 0.82rem;
+  color: #A9A9A9;
+  font-size: 24px;
   letter-spacing: 0.06em;
 }
 
@@ -389,7 +409,7 @@ margin: 0 15px;
 
 .whoWeDescription {
   margin: 1.4rem auto 2rem;
-  color: rgba(244, 241, 230, 0.62);
+  color: #A9A9A9;
   font-size: 24px;
   line-height: 1.8;
   letter-spacing: 0.02em;
@@ -414,10 +434,27 @@ article.whoWeLogoCard img {
   z-index: 1;
   margin: 3rem auto 0;
   width: 100%;
-  max-width: 72rem;
-  padding: 1.5rem 0 2rem;
+  padding: 50px 0 100px;
+  background: linear-gradient(
+  90deg,
+  #050505 0%,
+  #1a1a1a 40%,
+  #2c2418 70%,
+  #3a2f1f 100%
+);
 }
-
+.controlLiquidity::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/banner_logo.png");
+  background-repeat: no-repeat;
+  background-position: bottom right 10%;
+  background-size: contain;
+  opacity: 0.2;
+  top: 50px;
+  z-index: 1;
+}
 .aboutTitle {
   width: fit-content;
   text-align: center;
@@ -460,7 +497,7 @@ article.whoWeLogoCard img {
 }
 
 .aboutAvatarPlaceholder {
-  background: linear-gradient(165deg, #b8ad95 0%, #242424 68%);
+  background: linear-gradient(180.05deg, #F1DCAE -54.89%, #141414 99.95%);
 }
 
 .aboutAvatarFounder {
@@ -533,7 +570,7 @@ article.whoWeLogoCard img {
 
 .faqSubtitle {
   margin: 0.35rem 0 1.8rem;
-  color: rgba(244, 241, 230, 0.72);
+  color: #A9A9A9;
   font-size: 24px;
 }
 
@@ -574,19 +611,15 @@ article.whoWeLogoCard img {
   max-width: 80rem;
   padding: 2.2rem 1.5rem 1.25rem;
   background: rgba(8, 8, 8, 0.5);
-  border-top: 1px solid rgba(216, 193, 143, 0.18);
 }
 
 .footerInner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: start;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footerBrand {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
@@ -610,16 +643,16 @@ article.whoWeLogoCard img {
 
 .footerBrandName {
   margin: 0;
-  color: rgba(244, 241, 230, 0.95);
-  font-size: 1.15rem;
+  color: #fff;
+  font-size: 36px;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
 
 .footerBrandTagline {
   margin: 0;
-  color: rgba(244, 241, 230, 0.55);
-  font-size: 0.62rem;
+  color: #BCBCBC;
+  font-size: 16px;
   letter-spacing: 0.18em;
 }
 
@@ -631,7 +664,7 @@ article.whoWeLogoCard img {
 .footerNavTitle {
   margin: 0 0 0.65rem;
   color: rgba(244, 241, 230, 0.9);
-  font-size: 1.05rem;
+  font-size: 32px;
   font-weight: 500;
 }
 
@@ -642,10 +675,11 @@ article.whoWeLogoCard img {
 }
 
 .footerNavLink {
-  color: rgba(244, 241, 230, 0.55);
-  font-size: 0.62rem;
+  color: #fff;
+  font-size: 20px;
   letter-spacing: 0.22em;
   transition: color 160ms ease;
+  font-weight: 100;
 }
 
 .footerNavLink:hover {
@@ -681,19 +715,178 @@ article.whoWeLogoCard img {
 .footerBottom {
   margin-top: 1.8rem;
   padding-top: 0.9rem;
-  border-top: 1px solid rgba(216, 193, 143, 0.12);
   text-align: center;
 }
 
 .footerBottomText {
   margin: 0;
-  color: rgba(244, 241, 230, 0.45);
-  font-size: 0.7rem;
+  color: #F1DCAE;
+  font-size: 17px;
   letter-spacing: 0.02em;
 }
 
 .footerBottomSep {
   padding: 0 0.4rem;
   color: rgba(244, 241, 230, 0.3);
+}
+
+/* —— Control liquidity banner —— */
+.controlLiquidity {
+  position: relative;
+  overflow: hidden;
+  background: #0a0a0a;
+  color: #f5f4ef;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 4vw, 4rem);
+  min-height: min(70vh, 520px);
+}
+
+.controlLiquidity-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 90% 70% at 8% 0%,
+      rgba(185, 151, 87, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 80% 60% at 92% 5%,
+      rgba(160, 120, 70, 0.18),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 255, 255, 0.03),
+      transparent 45%
+    );
+}
+
+.controlLiquidity-watermark {
+  pointer-events: none;
+  position: absolute;
+  right: -2%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(58%, 640px);
+  height: auto;
+  opacity: 0.14;
+  object-fit: contain;
+  filter: sepia(0.4) saturate(1.15) brightness(0.95);
+}
+
+.controlLiquidity-inner {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: min(52vh, 420px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(3rem, 10vw, 6rem);
+}
+
+.controlLiquidity-headline {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.5rem;
+}
+
+.controlLiquidity-lineSans {
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  color: rgba(245, 244, 239, 0.95);
+  padding-left: 0.25rem;
+  text-transform: uppercase;
+}
+
+.controlLiquidity-lineSerif {
+  font-family: "GalleryModern";
+  font-weight: 300;
+  font-size: 96px;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  color: #faf9f6;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.controlLiquidity-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.controlLiquidity-footerCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.controlLiquidity-footerSans {
+  margin: 0;
+  font-family: "Neue Machina", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 244, 239, 0.92);
+}
+
+.controlLiquidity-footerSerif {
+  margin: 0;
+  font-family: "GalleryModern", "Times New Roman", serif;
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #faf9f6;
+}
+
+.controlLiquidity-cta {
+  flex-shrink: 0;
+  width: fit-content;
+  border-radius: 999px;
+  border: 1px solid rgba(185, 151, 87, 0.55);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 8px 50px;
+  color: #f4f1e6;
+  font-family: "Neue Machina", system-ui, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+  margin: auto;
+}
+
+.controlLiquidity-cta:hover {
+  border-color: #d8c18f;
+  color: #d8c18f;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+  .controlLiquidity-lineSerif {
+    margin-left: clamp(2rem, 10vw, 4rem);
+  }
+
+  .controlLiquidity-watermark {
+    width: 85%;
+    opacity: 0.08;
+    right: -10%;
+  }
+
+  .controlLiquidity-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
