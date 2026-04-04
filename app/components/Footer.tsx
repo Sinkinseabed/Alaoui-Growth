@@ -43,10 +43,7 @@ export default function Footer() {
 
       <div className="footerBottom">
         <p className="footerBottomText">
-          Alaoui Growth © 2026, All rights reserved{" "}
-          <span className="footerBottomSep">|</span> Terms and Conditions{" "}
-          <span className="footerBottomSep">|</span> Privacy Policy{" "}
-          <span className="footerBottomSep">|</span>
+          Alaoui Growth © 2026, All rights reserved
         </p>
       </div>
     </footer>

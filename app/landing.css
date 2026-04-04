@@ -96,6 +96,7 @@ button {
 }
 
 .landingTitle {
+  text-align: center;
   color: #f5f4ef;
   font-size: 96px;
   line-height: 0.95;
@@ -352,6 +353,10 @@ margin: 0 15px;
 }
 
 .offeringCard {
+  --offering-ease: cubic-bezier(0.22, 1, 0.32, 1);
+  --offering-ease-pop: cubic-bezier(0.34, 1.25, 0.64, 1);
+  position: relative;
+  z-index: 1;
   width: calc(100%/3 - 40px);
   margin: 20px;
   min-height: 13rem;
@@ -361,12 +366,28 @@ margin: 0 15px;
     radial-gradient(circle at 80% 0%, rgba(216, 193, 143, 0.28), transparent 36%),
     rgba(8, 8, 8, 0.86);
   padding: 0.9rem 0.8rem 0.85rem;
-  transition: transform 180ms ease, border-color 180ms ease;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 4px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.55s var(--offering-ease-pop),
+    border-color 0.45s var(--offering-ease),
+    box-shadow 0.55s var(--offering-ease),
+    filter 0.5s var(--offering-ease),
+    z-index 0s linear;
 }
 
 .offeringCard:hover {
-  transform: translateY(-2px);
-  border-color: rgba(216, 193, 143, 0.56);
+  z-index: 10;
+  transform: translateY(-28px) scale(1.06);
+  border-color: rgba(245, 232, 203, 0.95);
+  filter: brightness(1.18) saturate(1.12);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 28px 56px -12px rgba(0, 0, 0, 0.75),
+    0 0 0 2px rgba(216, 193, 143, 0.45),
+    0 0 64px 4px rgba(216, 193, 143, 0.55),
+    0 0 120px 8px rgba(216, 193, 143, 0.22);
 }
 
 .offeringCardIcon {
@@ -376,7 +397,29 @@ margin: 0 15px;
     justify-content: center;
 }
 .offeringCardIcon img {
-    max-height: 150px;
+  max-height: 150px;
+  transition: transform 0.55s var(--offering-ease-pop);
+}
+
+.offeringCard:hover .offeringCardIcon img {
+  transform: scale(1.12) translateY(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offeringCard,
+  .offeringCardIcon img {
+    transition-duration: 0.01ms;
+  }
+  .offeringCard:hover {
+    transform: none;
+    filter: none;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.04) inset,
+      0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+  .offeringCard:hover .offeringCardIcon img {
+    transform: none;
+  }
 }
 
 .offeringCardTitle {
@@ -747,8 +790,8 @@ article.whoWeLogoCard img {
 
 .footerNavLink {
   color: #fff;
-  font-size: 20px;
-  letter-spacing: 0.22em;
+  font-size: 14px;
+  letter-spacing: 0.18em;
   transition: color 160ms ease;
   font-weight: 100;
 }
@@ -794,11 +837,6 @@ article.whoWeLogoCard img {
   color: #F1DCAE;
   font-size: 17px;
   letter-spacing: 0.02em;
-}
-
-.footerBottomSep {
-  padding: 0 0.4rem;
-  color: rgba(244, 241, 230, 0.3);
 }
 
 /* —— Control liquidity banner —— */
@@ -1000,6 +1038,11 @@ article.whoWeLogoCard img {
   z-index: 2;
 }
 
+.clientReview-swiper.swiper-fade .swiper-slide {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .clientReview-card {
   border-radius: 18px;
 }
@@ -1026,7 +1069,6 @@ article.whoWeLogoCard img {
   background: #191919;
   color: #f4f1e6;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95);
-  animation: clientReviewFadeIn 420ms ease-out;
 }
 
 .clientReview-cardQuoteMark {
@@ -1092,11 +1134,21 @@ article.whoWeLogoCard img {
   gap: 1rem;
 }
 
-.clientReview-progressBar {
+.clientReview-progressTrack {
   width: 140px;
   height: 6px;
   border-radius: 999px;
-  background: #b99963;
+  background: rgba(217, 196, 153, 0.2);
+  overflow: hidden;
+}
+
+.clientReview-progressBar {
+  height: 100%;
+  width: 0;
+  min-width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #9a7b45, #d8c18f);
+  transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .clientReview-dots {
@@ -1110,12 +1162,18 @@ article.whoWeLogoCard img {
   height: 6px;
   border-radius: 999px;
   background: rgba(217, 196, 153, 0.4);
+  transition:
+    width 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .clientReview-dot--active {
   width: 8px;
   height: 8px;
   background: #f1dcae;
+  box-shadow: 0 0 12px rgba(241, 220, 174, 0.45);
 }
 
 .clientReview-arrows {
@@ -1294,18 +1352,6 @@ article.whoWeLogoCard img {
     color: #d8c18f;
   }
 }
-
-@keyframes clientReviewFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 @media screen and (max-width: 600px) {
   .web, .landingScrollArea {

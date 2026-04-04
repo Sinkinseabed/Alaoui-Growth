@@ -54,11 +54,16 @@ export default function ClientReview() {
           <Swiper
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
             effect="fade"
+            fadeEffect={{
+              crossFade: true,
+            }}
             slidesPerView={1}
-            speed={600}
+            speed={420}
             autoplay={{
-              delay: 2000,
+              delay: 6000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              waitForTransition: true,
             }}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             navigation={{
@@ -96,10 +101,12 @@ export default function ClientReview() {
 
         <div className="clientReview-controls">
           <div className="clientReview-progress">
-            <div
-              className="clientReview-progressBar"
-              style={{ width: `${progress}%` }}
-            />
+            <div className="clientReview-progressTrack">
+              <div
+                className="clientReview-progressBar"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
             <div className="clientReview-dots" aria-hidden="true">
               {reviews.map((_, index) => (
                 <span
