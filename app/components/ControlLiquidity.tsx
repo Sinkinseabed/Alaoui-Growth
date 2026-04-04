@@ -20,9 +20,9 @@ export default function ControlLiquidity() {
             <p className="controlLiquidity-footerSans">READY TO ENGINEER</p>
             <p className="controlLiquidity-footerSerif">MOMENTUM?</p>
           </div>
-          <button type="button" className="controlLiquidity-cta">
+          <a type="button" className="controlLiquidity-cta" href="https://t.me/alaoui_capital">
             Start Live Chat
-          </button>
+          </a>
         </div>
       </div>
     </section>

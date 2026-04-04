@@ -5,13 +5,16 @@ export default function Header() {
     <header className="landingHeader">
       <div className="landingBrand">
         <span className="landingBrandIcon">
-          <Image 
-  src="/images/logo.png" 
-  alt="logo" 
-  width={80} 
-  height={80} 
-/>
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            width={80}
+            height={80}
+          />
         </span>
+      </div>
+      <div className="menu-icon mobile">
+        <img src="/images/humberger.png" />
       </div>
       <nav className="landingNav">
         <a href="#services" className="landingNavLink">
@@ -27,9 +30,9 @@ export default function Header() {
           FAQs
         </a>
       </nav>
-      <button type="button" className="landingChatBtn">
+      <a type="button" className="landingChatBtn" href="https://t.me/alaoui_capital">
         Start Live Chat
-      </button>
+      </a>
     </header>
   );
 }

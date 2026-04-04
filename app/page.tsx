@@ -26,11 +26,13 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="landingSubtitle">
+            <p className="landingSubtitle web">
               Web3 growth engine to turn attention into viral growth
             </p>
 
-
+            <a type="button" className="landingCta mobile" href="https://t.me/alaoui_capital">
+              Connect With Us
+            </a>
           </div>
 
 
@@ -56,9 +58,9 @@ export default function Home() {
 
           </div>
           <div className="landing-info landing-info-middle">
-              <button type="button" className="landingCta">
+              <a type="button" className="landingCta web" href="https://t.me/alaoui_capital">
                 Connect With Us
-              </button>
+              </a>
               <div className="landingScrollArea">
                 <div className="landingArrow"><img src="/images/arrow.png"/></div>
                 <p className="landingScrollText">Scroll To Explore</p>

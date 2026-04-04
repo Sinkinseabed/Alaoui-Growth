@@ -31,10 +31,10 @@ export default function Footer() {
         </div>
 
         <div className="footerSocial">
-          <a className="footerSocialBtn" href="#" aria-label="X">
+          <a className="footerSocialBtn" href="https://x.com/alaouicapital" aria-label="X">
             <img src="/images/social_1.png" />
           </a>
-          <a className="footerSocialBtn" href="#" aria-label="Telegram">
+          <a className="footerSocialBtn" href="https://t.me/alaoui_capital" aria-label="Telegram">
                         <img src="/images/social_2.png" />
 
           </a>

@@ -30,7 +30,7 @@ body {
   font-family: "Neue Machina";
 }
 .wrapper {
-  width: 1280px;
+  max-width: 1280px;
   margin: auto;
 }
 button {
@@ -426,7 +426,7 @@ article.whoWeLogoCard {
 }
 article.whoWeLogoCard img {
     width: 126px;
-    margin: 36px 0;
+    margin: 36px auto;
 }
 
 .aboutSection {
@@ -533,8 +533,8 @@ article.whoWeLogoCard img {
 
 .aboutName {
   margin: 0.7rem 0 0.2rem;
-  color: rgba(244, 241, 230, 0.82);
-  font-size: 0.95rem;
+  color: #fff;
+  font-size: 20px;
   letter-spacing: 0.03em;
 }
 
@@ -553,55 +553,106 @@ article.whoWeLogoCard img {
 .faqSection {
   position: relative;
   z-index: 1;
-  margin: 3rem auto 1.5rem;
+  margin: 3rem auto 2.5rem;
   width: 100%;
-  max-width: 72rem;
-  padding: 1rem 0 2rem;
+  max-width: 52rem;
+  padding: 1.25rem 1.5rem 2.5rem;
+  text-align: left;
+}
+.faqTitle {
+  font-size: 72px;
   text-align: center;
 }
 
-.faqTitle {
-  margin: 0;
-  color: #f4f1e6;
-  font-size: 72px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
 .faqSubtitle {
-  margin: 0.35rem 0 1.8rem;
-  color: #A9A9A9;
   font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.faqList {
-  margin: 0 auto;
-  display: grid;
-  gap: 0.78rem;
+.faqAccordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
   width: 100%;
 }
 
-.faqItem {
-  border: 1px solid rgba(216, 193, 143, 0.35);
-  border-radius: 999px;
-  background: rgba(10, 10, 10, 0.72);
-  padding: 30px 40px;
+.faqAccordionItem {
+  border-radius: 12px;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.faqAccordionItem--open {
+  background: #1a1a1a;
+}
+
+.faqAccordionHeader {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  border: none;
+  background: transparent;
+  font: inherit;
   text-align: left;
-  transition: border-color 160ms ease, background-color 160ms ease;
+  cursor: pointer;
+  color: #f4f1e6;
 }
 
-.faqItem:hover {
-  border-color: rgba(216, 193, 143, 0.58);
-  background: rgba(13, 13, 13, 0.88);
+.faqAccordionHeader:hover {
+  color: #faf9f6;
 }
 
-.faqItemText {
+.faqAccordionQuestion {
+  flex: 1;
+  font-family: "Neue Machina", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+
+.faqAccordionToggle {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(216, 193, 143, 0.55);
+  color: #c5a267;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.faqAccordionPanel {
+  padding: 1.35rem 1.25rem;
+}
+
+.faqAccordionPanel[hidden] {
+  display: none;
+}
+
+.faqAccordionAnswer {
   margin: 0;
-  color: rgba(244, 241, 230, 0.9);
-  font-size: 24px;
-  letter-spacing: 0.01em;
+  color: #a9a9a9;
+  font-family: "Neue Machina", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
 }
 
+.faqAccordionItem--open .faqAccordionHeader {
+  border-bottom: 2px solid #F1DCAE;
+}
 
 .footerSection {
   position: relative;
@@ -873,30 +924,12 @@ article.whoWeLogoCard img {
   background: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 640px) {
-  .controlLiquidity-lineSerif {
-    margin-left: clamp(2rem, 10vw, 4rem);
-  }
-
-  .controlLiquidity-watermark {
-    width: 85%;
-    opacity: 0.08;
-    right: -10%;
-  }
-
-  .controlLiquidity-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 /* —— Client review section —— */
 .clientReviewSection {
   position: relative;
   z-index: 1;
-  margin: 3.5rem auto 0;
+  margin: 0 auto 0;
   width: 100%;
-  max-width: 1280px;
   padding: 3.25rem 0 4.5rem;
   background: radial-gradient(circle at 0% 0%, #2d2112 0%, #050505 55%);
 }
@@ -921,8 +954,7 @@ article.whoWeLogoCard img {
 .clientReview-titleSans {
   font-family: "Neue Machina";
   font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 0.28em;
+  font-size: 72px;
   text-transform: uppercase;
   color: #f4f1e6;
 }
@@ -1093,6 +1125,9 @@ article.whoWeLogoCard img {
 .clientReview-arrowIcon {
   font-size: 18px;
 }
+.mobile {
+  display: none;
+}
 
 @keyframes clientReviewFadeIn {
   from {
@@ -1105,23 +1140,140 @@ article.whoWeLogoCard img {
   }
 }
 
-@media (max-width: 768px) {
-  .clientReviewSection {
-    padding-inline: 1.25rem;
-  }
 
-  .clientReview-cardMain {
-    padding: 2rem 1.6rem 1.8rem;
-  }
-
-  .clientReview-cardShadow,
-  .clientReview-cardShadowBack {
+@media screen and (max-width: 600px) {
+  .web, .landingScrollArea {
     display: none;
   }
-
-  .clientReview-controls {
-    flex-direction: column;
-    align-items: flex-start;
+  .mobile {
+    display: block;
   }
-}
+  .landingCta  {
+    margin: auto;
+  }
 
+  .landingNav, .landingChatBtn {
+    display: none;
+  }
+  .landingLeftContent {
+    text-align: center;
+  }
+  .landingTitle, .offeringTitle {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .landingLiquidity {
+    font-size: 72px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+  .landingStatsWrap-main {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+.landing-info {
+    width: 100%;
+}
+.landingStats {
+    max-width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.landingStatValue {
+  font-size: 22px;
+}
+.landingStatLabel {
+  font-size: 15px;
+}
+.landingPartnersFooter, .landingPartnersTitle {
+  font-size: 13px;
+}
+.offeringSubTitle {
+    font-size: 13px;
+    letter-spacing: .15em;
+}
+.offeringCard {
+    width: 100%;
+}
+.offeringFooterText {
+    max-width: 70%;
+    margin: auto;
+    font-weight: 800;
+    line-height: 1.8;
+}
+.whoWeDescription {
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 100;
+}
+article.whoWeLogoCard {
+    width: calc(33% - 5px);
+}
+.aboutTitle {
+  width: 100%;
+}
+.aboutGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+}
+.aboutAvatarFounderClass {
+  bottom: 0;
+}
+.aboutCard {
+    margin-bottom: 25px;
+}
+.clientReview-titleSans, .clientReview-titleSerif, 
+.faqTitle, 
+.controlLiquidity-lineSans, 
+.controlLiquidity-lineSerif {
+  font-size: 32px;
+}
+.faqSection {
+  margin-top: 0;
+}
+.controlLiquidity-footer {
+    flex-direction: column-reverse;
+    width: 100%;
+    text-align: center;
+}
+.controlLiquidity-footerSans {
+  font-size: 26px;
+}
+.controlLiquidity-footerCopy {
+  width: 100%;
+}
+.footerInner {
+    flex-wrap: wrap;
+}
+.footerNav {
+    width: 100%;
+    margin-top: 30px;
+}
+.footerLogoMark {
+  width: 90px;
+}
+.footerBrandName {
+    font-size: 21px;
+}
+.footerBrandTagline {
+    font-size: 11px;
+}
+.footerNavTitle {
+    font-size: 18px;
+}
+.footerNavLink {
+    font-size: 11px;
+}
+.footerSocial {
+    margin: 35px auto 0;
+}
+.footerBottomText {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+}

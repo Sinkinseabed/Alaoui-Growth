@@ -78,7 +78,7 @@ export default function ClientReview() {
                   <div className="clientReview-footer">
                     <div className="clientReview-client">
                       <img
-                        src="/images/client_review_avatar.png"
+                        src="/images/slider-icon.png"
                         alt={review.client}
                         className="clientReview-avatar"
                       />
