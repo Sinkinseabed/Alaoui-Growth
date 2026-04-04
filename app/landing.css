@@ -225,8 +225,28 @@ section.landingStatsWrap-main {
   font-size: 20px;
   letter-spacing: 0.02em;
 }
+
 .landingArrow img {
-    max-height: 75px;
+  display: block;
+  max-height: 75px;
+  transform-origin: center center;
+  animation: landingArrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes landingArrowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landingArrow img {
+    animation: none;
+  }
 }
 
 .landingWaves {
