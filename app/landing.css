@@ -1129,6 +1129,152 @@ article.whoWeLogoCard img {
   display: none;
 }
 
+.landingMenuToggle {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.landingMobileNavBackdrop,
+.landingMobileNav {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .landingMobileNavBackdrop,
+  .landingMobileNav {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .landingMobileNavBackdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .landingMobileNavBackdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .landingMobileNav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: min(88vw, 300px);
+    z-index: 201;
+    padding: 1rem 1.25rem 1.5rem;
+    background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
+    border-left: 1px solid rgba(216, 193, 143, 0.22);
+    box-shadow: -16px 0 48px rgba(0, 0, 0, 0.55);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    pointer-events: none;
+  }
+
+  .landingMobileNav.is-open {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .landingMobileNavHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(216, 193, 143, 0.15);
+  }
+
+  .landingMobileNavTitle {
+    font-family: "Neue Machina", system-ui, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244, 241, 230, 0.65);
+  }
+
+  .landingMobileNavClose {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    border: 1px solid rgba(216, 193, 143, 0.45);
+    background: transparent;
+    color: #f4f1e6;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      border-color 0.18s ease,
+      color 0.18s ease;
+  }
+
+  .landingMobileNavClose:hover {
+    border-color: #d8c18f;
+    color: #d8c18f;
+  }
+
+  .landingMobileNavInner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+  }
+
+  .landingMobileNavLink {
+    padding: 0.85rem 0;
+    color: #f4f1e6;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: color 0.18s ease;
+  }
+
+  .landingMobileNavLink:hover {
+    color: #d8c18f;
+  }
+
+  .landingMobileNavCta {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    text-align: center;
+    border-radius: 999px;
+    border: 1px solid rgba(216, 193, 143, 0.45);
+    background: rgba(0, 0, 0, 0.35);
+    padding: 0.75rem 1.25rem;
+    color: #f4f1e6;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition:
+      border-color 0.18s ease,
+      color 0.18s ease;
+  }
+
+  .landingMobileNavCta:hover {
+    border-color: #d8c18f;
+    color: #d8c18f;
+  }
+}
+
 @keyframes clientReviewFadeIn {
   from {
     opacity: 0;
