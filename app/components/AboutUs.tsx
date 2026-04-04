@@ -11,9 +11,10 @@ const teamMembers = [
     name: "FOUNDER",
     role: "X",
     style: "aboutAvatarFounder",
-    class:"aboutAvatarFounderClass",
+    class: "aboutAvatarFounderClass",
     social: "x",
-    icon: "images/team_b.png"
+    icon: "images/team_b.png",
+    socialHref: "https://x.com/alaouicapital",
   },
   {
     id: "right",
@@ -47,7 +48,20 @@ export default function AboutUs() {
             <p className={`aboutName ${member.id === "center" ? "aboutNameCenter" : ""}`}>
               {member.name}
             </p>
-            <p className="aboutSocial">{member.role || member.social}</p>
+            <p className="aboutSocial">
+              {"socialHref" in member && member.socialHref ? (
+                <a
+                  href={member.socialHref}
+                  className="aboutSocialLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {member.role || member.social}
+                </a>
+              ) : (
+                member.role || member.social
+              )}
+            </p>
           </article>
         ))}
       </div>

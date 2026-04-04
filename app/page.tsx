@@ -30,7 +30,13 @@ export default function Home() {
               Web3 growth engine to turn attention into viral growth
             </p>
 
-            <a type="button" className="landingCta mobile" href="https://t.me/alaoui_capital">
+            <a
+              type="button"
+              className="landingCta mobile"
+              href="https://t.me/alaoui_capital"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Connect With Us
             </a>
           </div>
@@ -58,7 +64,13 @@ export default function Home() {
 
           </div>
           <div className="landing-info landing-info-middle">
-              <a type="button" className="landingCta web" href="https://t.me/alaoui_capital">
+              <a
+                type="button"
+                className="landingCta web"
+                href="https://t.me/alaoui_capital"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Connect With Us
               </a>
               <div className="landingScrollArea">

@@ -23,7 +23,13 @@ export default function Footer() {
           <p className="footerNavTitle">Navigation</p>
           <nav className="footerNavLinks" aria-label="Footer navigation">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="footerNavLink">
+              <a
+                key={link.href}
+                href={link.href}
+                className="footerNavLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {link.label}
               </a>
             ))}
@@ -31,10 +37,22 @@ export default function Footer() {
         </div>
 
         <div className="footerSocial">
-          <a className="footerSocialBtn" href="https://x.com/alaouicapital" aria-label="X">
+          <a
+            className="footerSocialBtn"
+            href="https://x.com/alaouicapital"
+            aria-label="X"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/images/social_1.png" />
           </a>
-          <a className="footerSocialBtn" href="https://t.me/alaoui_capital" aria-label="Telegram">
+          <a
+            className="footerSocialBtn"
+            href="https://t.me/alaoui_capital"
+            aria-label="Telegram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
                         <img src="/images/social_2.png" />
 
           </a>

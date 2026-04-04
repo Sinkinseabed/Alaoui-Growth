@@ -60,7 +60,13 @@ export default function Header() {
 
       <nav className="landingNav" aria-label="Main">
         {navLinks.map(({ href, label }) => (
-          <a key={href} href={href} className="landingNavLink">
+          <a
+            key={href}
+            href={href}
+            className="landingNavLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {label}
           </a>
         ))}
@@ -105,6 +111,8 @@ export default function Header() {
               key={href}
               href={href}
               className="landingMobileNavLink"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMenu}
             >
               {label}
