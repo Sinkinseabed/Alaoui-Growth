@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AnimatedHeading from "./AnimatedHeading";
 
 const faqItems = [
   {
@@ -49,7 +50,7 @@ export default function FAQ() {
 
   return (
     <section className="faqSection" id="faq" aria-labelledby="faq-heading">
-      <h2 className="faqTitle">FAQ</h2>
+      <AnimatedHeading className="faqTitle" variant="left">FAQ</AnimatedHeading>
       <p className="faqSubtitle">Frequently Asked Questions</p>
 
       <div className="faqAccordionList">

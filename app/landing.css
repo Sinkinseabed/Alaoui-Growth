@@ -104,6 +104,88 @@ button {
   font-family: "Neue Machina";
 }
 
+.landingTitlePop {
+  animation: landingTitlePopIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
+}
+
+.landingTitlePop .landingLiquidity {
+  animation: landingLiquidityReveal 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+  display: inline-block;
+  transform-origin: center;
+}
+
+@keyframes landingTitlePopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(82px) scale(0.78);
+    filter: blur(8px);
+  }
+  46% {
+    opacity: 1;
+    transform: translateY(-14px) scale(1.08);
+    filter: blur(0);
+  }
+  72% {
+    opacity: 1;
+    transform: translateY(5px) scale(0.985);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes landingLiquidityReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.72) translateY(24px);
+    filter: brightness(1.35);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-6px);
+    filter: brightness(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: brightness(1);
+  }
+}
+
+.animatedHeading {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.985);
+  filter: blur(1.5px);
+  transition:
+    opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1s ease-in-out;
+  will-change: opacity, transform, filter;
+}
+
+.animatedHeading--up {
+  transform: translate3d(0, 32px, 0) scale(0.985);
+}
+
+.animatedHeading--left {
+  transform: translate3d(-42px, 0, 0) scale(0.99);
+}
+
+.animatedHeading--right {
+  transform: translate3d(42px, 0, 0) scale(0.99);
+}
+
+.animatedHeading--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
 .landingLiquidity {
     font-family: "GalleryModern";
   font-size: 180px;
@@ -267,6 +349,22 @@ section.landingStatsWrap-main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .landingTitlePop {
+    animation: none;
+  }
+  .landingTitlePop .landingLiquidity {
+    animation: none;
+  }
+  .animatedHeading,
+  .animatedHeading--up,
+  .animatedHeading--left,
+  .animatedHeading--right,
+  .animatedHeading--visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
   .landingArrow img {
     animation: none;
   }
@@ -507,11 +605,45 @@ margin: 0 15px;
   justify-content: space-between;
 }
 article.whoWeLogoCard {
+    position: relative;
     width: calc(100% / 5 - 5px);
+    overflow: hidden;
+    border-radius: 6px;
 }
 article.whoWeLogoCard img {
     width: 126px;
     margin: 36px auto;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease-in-out;
+}
+
+.whoWeLogoName {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translate(-50%, 10px);
+  opacity: 0;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(8, 8, 8, 0.88);
+  border: 1px solid rgba(216, 193, 143, 0.45);
+  color: #f4f1e6;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+article.whoWeLogoCard:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.65);
+}
+
+article.whoWeLogoCard:hover .whoWeLogoName {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .aboutSection {

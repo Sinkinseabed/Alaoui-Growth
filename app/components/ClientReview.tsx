@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
+import AnimatedHeading from "./AnimatedHeading";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -37,14 +38,14 @@ export default function ClientReview() {
     <section className="clientReviewSection" aria-labelledby="client-review-title">
       <div className="clientReview-inner">
         <header className="clientReview-header">
-          <h2 id="client-review-title" className="clientReview-title">
+          <AnimatedHeading as="h2" id="client-review-title" className="clientReview-title" variant="up">
             <span className="clientReview-titleSans">CLIENT&apos;S</span>
             <span className="clientReview-titleSerif">
               REVIEWS ABOUT
               <br />
               OUR WORK
             </span>
-          </h2>
+          </AnimatedHeading>
         </header>
 
         <div className="clientReview-stack">

@@ -1,3 +1,5 @@
+import AnimatedHeading from "./AnimatedHeading";
+
 const navLinks = [
   { label: "SERVICES", href: "#services" },
   { label: "TEAM", href: "#team" },
@@ -20,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div className="footerNav">
-          <p className="footerNavTitle">Navigation</p>
+          <AnimatedHeading as="p" className="footerNavTitle" variant="up">Navigation</AnimatedHeading>
           <nav className="footerNavLinks" aria-label="Footer navigation">
             {navLinks.map((link) => (
               <a

@@ -6,6 +6,8 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import OurOffering from "./components/OurOffering";
 import WhoWe from "./components/WhoWe";
+import CountUpNumber from "./components/CountUpNumber";
+import AnimatedHeading from "./components/AnimatedHeading";
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
 
         <section className="landingHero">
           <div className="landingLeftContent">
-            <h1 className="landingTitle">
+            <h1 className="landingTitle landingTitlePop">
               TURN ATTENTION
               <br />
               INTO{" "}
@@ -47,15 +49,15 @@ export default function Home() {
           <div className="landing-info landing-info-left landingStatsWrap">
             <div className="landingStats">
               <p>
-                <span className="landingStatValue">100M+</span>{" "}
+                <CountUpNumber className="landingStatValue" target={100} suffix="M+" />{" "}
                 <span className="landingStatLabel">SOCIAL MEDIA IMPRESSIONS</span>
               </p>
               <p>
-                <span className="landingStatValue">50+</span>{" "}
+                <CountUpNumber className="landingStatValue" target={50} suffix="+" />{" "}
                 <span className="landingStatLabel">STRATEGIC PARTNERS</span>
               </p>
               <p>
-                <span className="landingStatValue">5+</span>{" "}
+                <CountUpNumber className="landingStatValue" target={5} suffix="+" />{" "}
                 <span className="landingStatLabel">YEARS OF WEB 3.0 EXPERIENCE</span>
               </p>
             </div>
@@ -80,9 +82,9 @@ export default function Home() {
             </div>
           <aside className="landing-info landing-info-right ">
             <div className="landingPartners">
-            <p className="landingPartnersTitle">
+            <AnimatedHeading as="p" className="landingPartnersTitle" variant="right">
               OUR PARTNERS
-            </p>
+            </AnimatedHeading>
             <div className="landingPartnersGrid">
                 <div  className="landingPartnerLogo">
                   <img src={'/images/partner_1.png'} />

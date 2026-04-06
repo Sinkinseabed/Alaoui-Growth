@@ -1,3 +1,5 @@
+import AnimatedHeading from "./AnimatedHeading";
+
 export default function OurOffering() {
   const offeringCards = [
     {
@@ -43,7 +45,7 @@ export default function OurOffering() {
         "Our experienced design team delivers captivating visual identities, UI/UX, and marketing assets optimized for blockchain, NFT, and Web3 audiences.",
     },
     {
-      icon: "/images/offering_8.png",
+      icon: "/images/offering_8_new.png",
       title: "Development",
       description:
         "We provide technical expertise to build, launch, and scale blockchain-based projects, NFT platforms, and decentralized applications.",
@@ -53,8 +55,8 @@ export default function OurOffering() {
   return (
     <section className="offeringSection" id="services">
       <div className="offeringHeader">
-        <h2 className="offeringTitle">OUR OFFERINGS</h2>
-        <p className="offeringSubTitle">One stop solution for everything web3.0</p>
+        <AnimatedHeading className="offeringTitle" variant="up">OUR OFFERINGS</AnimatedHeading>
+        <AnimatedHeading as="p" className="offeringSubTitle" variant="up" delayMs={120}>One stop solution for everything web3.0</AnimatedHeading>
       </div>
 
       <div className="offeringGrid">

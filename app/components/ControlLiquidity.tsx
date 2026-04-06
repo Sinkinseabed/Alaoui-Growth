@@ -1,3 +1,5 @@
+import AnimatedHeading from "./AnimatedHeading";
+
 export default function ControlLiquidity() {
   return (
     <section
@@ -6,14 +8,14 @@ export default function ControlLiquidity() {
     >
       <div className="controlLiquidity-glow" aria-hidden />
       <div className="controlLiquidity-inner">
-        <h2 className="controlLiquidity-headline" id="control-liquidity-title">
+        <AnimatedHeading as="h2" className="controlLiquidity-headline" id="control-liquidity-title" variant="right">
           <span className="controlLiquidity-lineSans">
             IF YOU CONTROL ATTENTION,
           </span>
           <span className="controlLiquidity-lineSerif">
             YOU CONTROL LIQUIDITY.
           </span>
-        </h2>
+        </AnimatedHeading>
 
         <div className="controlLiquidity-footer">
           <div className="controlLiquidity-footerCopy">

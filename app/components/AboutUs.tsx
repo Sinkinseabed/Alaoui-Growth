@@ -1,3 +1,5 @@
+import AnimatedHeading from "./AnimatedHeading";
+
 const teamMembers = [
   {
     id: "left",
@@ -29,11 +31,11 @@ export default function AboutUs() {
   return (
     <section className="aboutSection" id="team">
       <div className="wrapper">
-      <h2 className="aboutTitle">
+      <AnimatedHeading className="aboutTitle" variant="right">
         A LITTLE
         <br />
         <span className="aboutTitleAccent">ABOUT US</span>
-      </h2>
+      </AnimatedHeading>
 
       <div className="aboutGrid">
         {teamMembers.map((member) => (
