@@ -64,8 +64,6 @@ export default function Header() {
             key={href}
             href={href}
             className="landingNavLink"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {label}
           </a>
@@ -111,8 +109,6 @@ export default function Header() {
               key={href}
               href={href}
               className="landingMobileNavLink"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={closeMenu}
             >
               {label}

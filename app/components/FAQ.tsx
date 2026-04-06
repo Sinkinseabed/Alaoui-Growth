@@ -81,8 +81,8 @@ export default function FAQ() {
                 id={panelId}
                 role="region"
                 aria-labelledby={`faq-trigger-${index}`}
-                className="faqAccordionPanel"
-                hidden={!isOpen}
+                aria-hidden={!isOpen}
+                className={`faqAccordionPanel${isOpen ? " faqAccordionPanel--open" : ""}`}
               >
                 <div className="faqAccordionDivider" />
                 <p className="faqAccordionAnswer">{item.answer}</p>

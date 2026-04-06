@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type CountUpNumberProps = {
   target: number;
@@ -15,9 +15,55 @@ export default function CountUpNumber({
   durationMs = 2200,
   className,
 }: CountUpNumberProps) {
+  const valueRef = useRef<HTMLSpanElement | null>(null);
   const [value, setValue] = useState(0);
+  const [shouldStart, setShouldStart] = useState(false);
 
   useEffect(() => {
+    if (shouldStart) {
+      return;
+    }
+
+    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+    if (!isMobile) {
+      setShouldStart(true);
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      setShouldStart(true);
+      return;
+    }
+
+    const element = valueRef.current;
+    if (!element) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldStart(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.45,
+        rootMargin: "0px 0px -10% 0px",
+      }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [shouldStart]);
+
+  useEffect(() => {
+    if (!shouldStart) {
+      return;
+    }
+
     let animationFrameId = 0;
     const startTime = performance.now();
 
@@ -36,7 +82,11 @@ export default function CountUpNumber({
     animationFrameId = requestAnimationFrame(tick);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [target, durationMs]);
+  }, [shouldStart, target, durationMs]);
 
-  return <span className={className}>{`${value}${suffix}`}</span>;
+  return (
+    <span ref={valueRef} className={className}>
+      {`${value}${suffix}`}
+    </span>
+  );
 }
