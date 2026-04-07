@@ -16,28 +16,30 @@ const partnerLogos = [
 export default function WhoWe() {
   return (
     <section className="whoWeSection" id="results">
-      <AnimatedHeading className="whoWeTitle" variant="left">
-        WHO WE HAVE
-        <br />
-        <span className="whoWeTitleAccent">WORKED WITH</span>
-      </AnimatedHeading>
+      <div className="wrapper">
+        <AnimatedHeading className="whoWeTitle" variant="left">
+          WHO WE HAVE
+          <br />
+          <span className="whoWeTitleAccent">WORKED WITH</span>
+        </AnimatedHeading>
 
-      <p className="whoWeDescription">
-        We help Web3 brands define their positioning, reach the right audience, and create the momentum needed to grow. Even memecoins built for mainstream parabolic growth.
-      </p>
+        <p className="whoWeDescription">
+          We help Web3 brands define their positioning, reach the right audience, and create the momentum needed to grow. Even memecoins built for mainstream parabolic growth.
+        </p>
 
-      <div className="whoWeGrid">
-        {partnerLogos.map((logo) => (
-          <article
-            key={logo.name}
-            className={`whoWeLogoCard`}
-            aria-label={logo.name}
-            title={logo.name}
-          >
-              <img src={logo.path} alt={logo.name}/>
+        <div className="whoWeGrid">
+          {partnerLogos.map((logo) => (
+            <article
+              key={logo.name}
+              className={`whoWeLogoCard`}
+              aria-label={logo.name}
+              title={logo.name}
+            >
+              <img src={logo.path} alt={logo.name} />
               <span className="whoWeLogoName">{logo.name}</span>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

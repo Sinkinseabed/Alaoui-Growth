@@ -7,22 +7,22 @@ const faqItems = [
   {
     question: "How does working with Alaoui Growth actually work?",
     answer:
-      "We align on your goals in a discovery phase, then combine narrative positioning, community activation, and campaign execution in a clear roadmap. You get regular reporting and iteration based on what the data and sentiment show.",
+      "It starts with strategy where we learn about your project, goals and current traction. If it's a fit, we put together a tailored growth plan. Once aligned, we deal within 24 hours.\n\nWe identify your highest potential and time it for the best reach to get it in front of the right crypto audiences. The result is as organic as possible, we can start a campaign based on your current followers to make it grow steadily over days or weeks.\n\nFrom there, we operate with realtime updates, clear deliverables and FULL transparency on whats working and what we're adjusting.",
   },
   {
-    question: "How does the X Boost service work?",
+    question: "How does the X-boost service work?",
     answer:
-      "X Boost focuses on amplifying your message on X through coordinated content, timing, and creator touchpoints so your narrative breaks through noise without feeling spammy.",
+      "We amplify your content through a network of active Web3 accounts. No bots, no coordinated like-farms.",
   },
   {
     question: "Can you help before Token Generation Event (TGE)?",
     answer:
-      "Yes. Pre-TGE is often where narrative and community are set. We can help with positioning, teaser campaigns, and building anticipation so launch day has real momentum.",
+      "Pre-TGE is where the REAL leverage is. We help you build narrative momentum and KOL relationships before launch. A strong waitlist and content means your TGE sells itself.",
   },
   {
     question: "Stance on KOL marketing, is it still worth it?",
     answer:
-      "KOLs still move attention when chosen for fit and credibility—not follower count alone. We prioritize partners who understand your product and audience so endorsements feel authentic.",
+      "Blind KOL blasts and farmers are dead.\n\nWe work with TOP KOLs who have real pull and only promote projects they truly understand. Co written threads, spaces and strong ecosystem positioning.",
   },
   {
     question: "Do you handle FUD and narrative attacks?",
@@ -32,12 +32,12 @@ const faqItems = [
   {
     question: "What types of projects do you turn down?",
     answer:
-      "We pass on projects that require misleading claims, pump-and-dump style promotion, or anything that doesn’t align with how we build sustainable attention.",
+      "We are selective. We don't accept any form of KOL farming, standard pump and dump tokens or projects under <$100K market cap. Our reputation is our product so we only work with clients who are genuine experts in their field.\n\nIt has to be a WIN WIN for both sides.",
   },
   {
     question: "What does it cost to work with you?",
     answer:
-      "Engagements vary by scope and timeline. After a short intro call we share a proposal with clear deliverables and pricing—no surprise fees buried in the fine print.",
+      "Pricing depends on the scope and stage of your project. We offer custom packages for projects, up to fullscale growth operations for established protocols.\n\nWe don't publish fixed rates because we don't believe in one size fits-all approach. We'll give you a transparent breakdown based on what YOU need. We accept both stablecoins and tokens as payment, with the right terms.",
   },
 ];
 
