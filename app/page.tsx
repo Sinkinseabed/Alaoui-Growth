@@ -1,3 +1,5 @@
+'use client';
+
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
 import ClientReview from "./components/ClientReview";
@@ -6,6 +8,8 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import OurOffering from "./components/OurOffering";
 import WhoWe from "./components/WhoWe";
+import AnimatedCounter from "./components/AnimatedCounter";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -17,14 +21,33 @@ export default function Home() {
 
         <section className="landingHero">
           <div className="landingLeftContent">
-            <h1 className="landingTitle">
-              TURN ATTENTION
-              <br />
-              INTO{" "}
-              <span className="landingLiquidity">
+            <motion.h1 
+              className="landingTitle"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                TURN ATTENTION
+                <br />
+                INTO{" "}
+              </motion.div>
+              <motion.span 
+                className="landingLiquidity"
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              >
                 LIQUIDITY
-              </span>
-            </h1>
+              </motion.span>
+            </motion.h1>
 
             <p className="landingSubtitle web">
               Web3 growth engine to turn attention into viral growth
@@ -47,15 +70,21 @@ export default function Home() {
           <div className="landing-info landing-info-left landingStatsWrap">
             <div className="landingStats">
               <p>
-                <span className="landingStatValue">100M+</span>{" "}
+                <span className="landingStatValue">
+                  <AnimatedCounter end={100} suffix="M+" duration={2000} />
+                </span>{" "}
                 <span className="landingStatLabel">SOCIAL MEDIA IMPRESSIONS</span>
               </p>
               <p>
-                <span className="landingStatValue">50+</span>{" "}
+                <span className="landingStatValue">
+                  <AnimatedCounter end={50} suffix="+" duration={2000} />
+                </span>{" "}
                 <span className="landingStatLabel">STRATEGIC PARTNERS</span>
               </p>
               <p>
-                <span className="landingStatValue">5+</span>{" "}
+                <span className="landingStatValue">
+                  <AnimatedCounter end={5} suffix="+" duration={2000} />
+                </span>{" "}
                 <span className="landingStatLabel">YEARS OF WEB 3.0 EXPERIENCE</span>
               </p>
             </div>
