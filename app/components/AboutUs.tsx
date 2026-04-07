@@ -45,7 +45,9 @@ export default function AboutUs() {
                 <>
                 <img src={member.icon} />
                 </>
-              ) : null}
+              ) : (
+                <span className="aboutAvatarQuestionMark">?</span>
+              )}
             </div>
             <p className={`aboutName ${member.id === "center" ? "aboutNameCenter" : ""}`}>
               {member.name}

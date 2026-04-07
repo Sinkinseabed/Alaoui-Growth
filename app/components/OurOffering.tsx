@@ -55,7 +55,7 @@ export default function OurOffering() {
   return (
     <section className="offeringSection" id="services">
       <div className="offeringHeader">
-        <AnimatedHeading className="offeringTitle" variant="up">OUR OFFERINGS</AnimatedHeading>
+        <AnimatedHeading className="offeringTitle" variant="up"><span>OUR</span> OFFERINGS</AnimatedHeading>
         <AnimatedHeading as="p" className="offeringSubTitle" variant="up" delayMs={120}>One stop solution for everything web3.0</AnimatedHeading>
       </div>
 

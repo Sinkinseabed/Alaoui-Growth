@@ -27,7 +27,7 @@ const faqItems = [
   {
     question: "Do you handle FUD and narrative attacks?",
     answer:
-      "We help you respond with clear facts, consistent messaging, and coordinated comms so your community hears your voice first—not only reactive noise.",
+      "Speed and substance. We develop a crisis playbook BEFORE you even need it. Pre-approved responses, transparent communication and a network of credible voices who can validate your project publicly.\n\nWhen FUD hits, you won't be scrambling.",
   },
   {
     question: "What types of projects do you turn down?",
