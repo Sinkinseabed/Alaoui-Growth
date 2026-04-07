@@ -7,12 +7,12 @@ const faqItems = [
   {
     question: "How does working with Alaoui Growth actually work?",
     answer:
-      "It starts with strategy where we learn about your project, goals and current traction. If it's a fit, we put together a tailored growth plan. Once aligned, we deal within 24 hours.\n\nWe identify your highest potential and time it for the best reach to get it in front of the right crypto audiences. The result is as organic as possible, we can start a campaign based on your current followers to make it grow steadily over days or weeks.\n\nFrom there, we operate with realtime updates, clear deliverables and FULL transparency on whats working and what we're adjusting.",
+      "It starts with strategy where we learn about your project, goals and current traction. If it's a fit, we put together a tailored growth plan. Once aligned, we deal within 24 hours.",
   },
   {
     question: "How does the X-boost service work?",
     answer:
-      "We amplify your content through a network of active Web3 accounts. No bots, no coordinated like-farms.",
+      "We amplify your content through a network of active Web3 accounts. No bots, no coordinated like-farms. We identify your highest potential and time it for the best reach to get it in front of the right crypto audiences. The result is as organic as possible, we can start a campaign based on your current followers to make it grow steadily over days or weeks.",
   },
   {
     question: "Can you help before Token Generation Event (TGE)?",
@@ -42,7 +42,7 @@ const faqItems = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
