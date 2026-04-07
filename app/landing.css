@@ -29,10 +29,12 @@
 body {
   font-family: "Neue Machina";
 }
+
 .wrapper {
   max-width: 1280px;
   margin: auto;
 }
+
 button {
   cursor: pointer;
 }
@@ -44,6 +46,7 @@ button {
   background: #090909;
   color: #f4f1e6;
 }
+
 .landing-hero {
   background-image: url('/images/hero_bg.png');
   background-size: cover;
@@ -64,11 +67,9 @@ button {
   position: absolute;
   inset: 0;
   opacity: 0.25;
-  background-image: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.25) 0.5px,
-    transparent 0.5px
-  );
+  background-image: radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.25) 0.5px,
+      transparent 0.5px);
   background-size: 3px 3px;
 }
 
@@ -122,16 +123,19 @@ button {
     transform: translateY(82px) scale(0.78);
     filter: blur(8px);
   }
+
   46% {
     opacity: 1;
     transform: translateY(-14px) scale(1.08);
     filter: blur(0);
   }
+
   72% {
     opacity: 1;
     transform: translateY(5px) scale(0.985);
     filter: blur(0);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -145,11 +149,13 @@ button {
     transform: scale(0.72) translateY(24px);
     filter: brightness(1.35);
   }
+
   55% {
     opacity: 1;
     transform: scale(1.1) translateY(-6px);
     filter: brightness(1.06);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -187,7 +193,7 @@ button {
 }
 
 .landingLiquidity {
-    font-family: "GalleryModern";
+  font-family: "GalleryModern";
   font-size: 180px;
   background: linear-gradient(to bottom, #f5e8cb, #d8c18f);
   -webkit-background-clip: text;
@@ -200,13 +206,15 @@ button {
   text-align: center;
   color: #fff;
   font-size: 20px;
-      font-weight: 100;
+  font-weight: 100;
 }
+
 section.landingStatsWrap-main {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
+
 .landingCta {
   width: fit-content;
   border-radius: 999px;
@@ -222,10 +230,12 @@ section.landingStatsWrap-main {
   border-color: #d8c18f;
   color: #d8c18f;
 }
+
 .landing-info-right {
-      display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .landingPartners {
   display: flex;
   flex-direction: column;
@@ -273,10 +283,10 @@ section.landingStatsWrap-main {
 }
 
 .landing-info.landing-info-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .landingPartnersFooter {
@@ -310,12 +320,15 @@ section.landingStatsWrap-main {
   color: rgba(244, 241, 230, 0.75);
   font-size: 24px;
 }
+
 .landing-info {
   width: 33%
 }
+
 .landing-info-middle {
-    text-align: center;
+  text-align: center;
 }
+
 .landingScrollArea {
   text-align: center;
 }
@@ -339,10 +352,12 @@ section.landingStatsWrap-main {
 }
 
 @keyframes landingArrowPulse {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.18);
   }
@@ -352,9 +367,11 @@ section.landingStatsWrap-main {
   .landingTitlePop {
     animation: none;
   }
+
   .landingTitlePop .landingLiquidity {
     animation: none;
   }
+
   .animatedHeading,
   .animatedHeading--up,
   .animatedHeading--left,
@@ -365,6 +382,7 @@ section.landingStatsWrap-main {
     filter: none;
     transition: none;
   }
+
   .landingArrow img {
     animation: none;
   }
@@ -412,8 +430,8 @@ section.landingStatsWrap-main {
 .landingNavLink {
   transition: color 180ms ease;
   color: #fff;
-margin: 0 15px;
-    font-size: 20px;
+  margin: 0 15px;
+  font-size: 20px;
 
 }
 
@@ -452,11 +470,9 @@ margin: 0 15px;
   left: -15%;
   width: 70%;
   height: 80%;
-  background: radial-gradient(
-    circle at center,
-    rgba(58, 55, 47, 0.55) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle at center,
+      rgba(58, 55, 47, 0.55) 0%,
+      transparent 70%);
   filter: blur(80px);
   z-index: -1;
   pointer-events: none;
@@ -536,10 +552,11 @@ margin: 0 15px;
 
 .offeringCardIcon {
   margin-bottom: 30px;
-      display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .offeringCardIcon img {
   max-height: 150px;
   transition: transform 0.55s var(--offering-ease-pop);
@@ -550,10 +567,12 @@ margin: 0 15px;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .offeringCard,
   .offeringCardIcon img {
     transition-duration: 0.01ms;
   }
+
   .offeringCard:hover {
     transform: none;
     filter: none;
@@ -561,6 +580,7 @@ margin: 0 15px;
       0 1px 0 rgba(255, 255, 255, 0.04) inset,
       0 4px 20px rgba(0, 0, 0, 0.35);
   }
+
   .offeringCard:hover .offeringCardIcon img {
     transform: none;
   }
@@ -620,7 +640,7 @@ margin: 0 15px;
   font-size: 24px;
   line-height: 1.8;
   letter-spacing: 0.02em;
-      text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .whoWeGrid {
@@ -628,16 +648,18 @@ margin: 0 15px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 article.whoWeLogoCard {
-    position: relative;
-    width: calc(100% / 5 - 5px);
-    overflow: hidden;
-    border-radius: 6px;
+  position: relative;
+  width: calc(100% / 5 - 5px);
+  overflow: hidden;
+  border-radius: 6px;
 }
+
 article.whoWeLogoCard img {
-    width: 126px;
-    margin: 36px auto;
-    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease-in-out;
+  width: 126px;
+  margin: 36px auto;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease-in-out;
 }
 
 .whoWeLogoName {
@@ -676,14 +698,13 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   margin: 3rem auto 0;
   width: 100%;
   padding: 50px 0 100px;
-  background: linear-gradient(
-  90deg,
-  #050505 0%,
-  #1a1a1a 40%,
-  #2e2a23 70%,
-  #3E3A31 100%
-);
+  background: linear-gradient(90deg,
+      #050505 0%,
+      #1a1a1a 40%,
+      #2e2a23 70%,
+      #3E3A31 100%);
 }
+
 .controlLiquidity::before {
   content: "";
   position: absolute;
@@ -696,6 +717,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   top: 50px;
   z-index: 1;
 }
+
 .aboutTitle {
   width: fit-content;
   text-align: center;
@@ -716,7 +738,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
 .aboutGrid {
   display: flex;
   justify-content: space-between;
-      margin-top: 150px;
+  margin-top: 150px;
 }
 
 .aboutCard {
@@ -724,9 +746,10 @@ article.whoWeLogoCard:hover .whoWeLogoName {
 }
 
 .aboutAvatarFounderClass {
-    position: relative;
-    bottom: 80px;
+  position: relative;
+  bottom: 80px;
 }
+
 .aboutAvatar {
   position: relative;
   margin: 0 auto;
@@ -826,6 +849,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   padding: 1.25rem 1.5rem 2.5rem;
   text-align: left;
 }
+
 .faqTitle {
   font-size: 72px;
   text-align: center;
@@ -1079,21 +1103,15 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      ellipse 90% 70% at 8% 0%,
+    radial-gradient(ellipse 90% 70% at 8% 0%,
       rgba(185, 151, 87, 0.22),
-      transparent 55%
-    ),
-    radial-gradient(
-      ellipse 80% 60% at 92% 5%,
+      transparent 55%),
+    radial-gradient(ellipse 80% 60% at 92% 5%,
       rgba(160, 120, 70, 0.18),
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 50% 100%,
+      transparent 50%),
+    radial-gradient(circle at 50% 100%,
       rgba(255, 255, 255, 0.03),
-      transparent 45%
-    );
+      transparent 45%);
 }
 
 .controlLiquidity-watermark {
@@ -1320,6 +1338,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
+
   100% {
     opacity: 0;
     transform: translate3d(112%, -6px, 0) scale(0.98) rotate(4deg);
@@ -1331,6 +1350,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
+
   100% {
     opacity: 0;
     transform: translate3d(-112%, -6px, 0) scale(0.98) rotate(-4deg);
@@ -1341,12 +1361,10 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 20, 20, 0.08) 0%,
-    rgba(10, 10, 10, 0.4) 70%,
-    rgba(8, 8, 8, 0.58) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(20, 20, 20, 0.08) 0%,
+      rgba(10, 10, 10, 0.4) 70%,
+      rgba(8, 8, 8, 0.58) 100%);
   pointer-events: none;
 }
 
@@ -1482,6 +1500,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
 .clientReview-arrowIcon {
   font-size: 18px;
 }
+
 .mobile {
   display: none;
 }
@@ -1500,6 +1519,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
 }
 
 @media (min-width: 601px) {
+
   .landingMobileNavBackdrop,
   .landingMobileNav {
     display: none !important;
@@ -1633,160 +1653,206 @@ article.whoWeLogoCard:hover .whoWeLogoName {
 }
 
 @media screen and (max-width: 600px) {
-  .web, .landingScrollArea {
+
+  .web,
+  .landingScrollArea {
     display: none;
   }
+
   .mobile {
     display: block;
   }
-  .landingCta  {
+
+  .landingCta {
     margin: auto;
   }
 
-  .landingNav, .landingChatBtn {
+  .landingNav,
+  .landingChatBtn {
     display: none;
   }
+
   .landingLeftContent {
     text-align: center;
   }
-  .landingTitle, .offeringTitle {
+
+  .landingTitle,
+  .offeringTitle {
     font-size: 32px;
     line-height: 1.2;
   }
+
   .landingLiquidity {
     font-size: 72px;
     width: 100%;
     display: block;
     margin-top: 10px;
   }
+
   .landingStatsWrap-main {
     flex-wrap: wrap;
     flex-direction: column-reverse;
-}
-.landing-info {
+  }
+
+  .landing-info {
     width: 100%;
-}
-.landingStats {
+  }
+
+  .landingStats {
     max-width: 75%;
     margin: auto;
     text-align: center;
     margin-top: 50px;
-}
-.landingStatValue {
-  font-size: 22px;
-}
-.landingStatLabel {
-  font-size: 15px;
-}
-.landingPartnersFooter, .landingPartnersTitle {
-  font-size: 13px;
-}
-.offeringSubTitle {
+  }
+
+  .landingStatValue {
+    font-size: 22px;
+  }
+
+  .landingStatLabel {
+    font-size: 15px;
+  }
+
+  .landingPartnersFooter,
+  .landingPartnersTitle {
+    font-size: 13px;
+  }
+
+  .offeringSubTitle {
     font-size: 13px;
     letter-spacing: .15em;
-}
-.offeringCard {
+  }
+
+  .offeringCard {
     width: 100%;
-}
-.offeringFooterText {
+  }
+
+  .offeringFooterText {
     max-width: 70%;
     margin: auto;
     font-weight: 800;
     line-height: 1.8;
-}
-.whoWeDescription {
+  }
+
+  .whoWeDescription {
     font-size: 14px;
     padding: 0 20px;
     font-weight: 100;
-}
-article.whoWeLogoCard {
+  }
+
+  article.whoWeLogoCard {
     width: calc(33% - 5px);
-}
-.aboutTitle {
-  width: 100%;
-}
-.aboutGrid {
+  }
+
+  .aboutTitle {
+    width: 100%;
+  }
+
+  .aboutGrid {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 100px;
-}
-.aboutAvatarFounderClass {
-  bottom: 0;
-}
-.aboutCard {
+  }
+
+  .aboutAvatarFounderClass {
+    bottom: 0;
+  }
+
+  .aboutCard {
     margin-bottom: 25px;
-}
-.clientReview-stack {
+  }
+
+  .clientReview-stack {
     min-height: 380px;
-}
-.clientReview-cardStackItem {
+  }
+
+  .clientReview-cardStackItem {
     padding: 1.8rem 1.4rem 1.6rem;
     min-height: auto;
-}
-.clientReview-cardStackItem--middle {
+  }
+
+  .clientReview-cardStackItem--middle {
     transform: translate3d(-8px, 12px, 0) scale(0.975);
-}
-.clientReview-cardStackItem--back {
+  }
+
+  .clientReview-cardStackItem--back {
     transform: translate3d(-14px, 24px, 0) scale(0.95);
-}
-.clientReview-text {
+  }
+
+  .clientReview-text {
     font-size: 14px;
     line-height: 1.7;
-}
-.clientReview-controls {
+  }
+
+  .clientReview-controls {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-}
-.clientReview-titleSans, .clientReview-titleSerif, 
-.faqTitle, 
-.controlLiquidity-lineSans, 
-.controlLiquidity-lineSerif {
-  font-size: 32px;
-}
-.faqSection {
-  margin-top: 0;
-}
-.controlLiquidity-footer {
+  }
+
+  .clientReview-titleSans,
+  .clientReview-titleSerif,
+  .faqTitle,
+  .controlLiquidity-lineSans,
+  .controlLiquidity-lineSerif {
+    font-size: 32px;
+  }
+
+  .faqSection {
+    margin-top: 0;
+  }
+
+  .controlLiquidity-footer {
     flex-direction: column-reverse;
     width: 100%;
     text-align: center;
-}
-.controlLiquidity-footerSans {
-  font-size: 26px;
-}
-.controlLiquidity-footerCopy {
-  width: 100%;
-}
-.footerInner {
+  }
+
+  .controlLiquidity-footerSans {
+    font-size: 26px;
+  }
+
+  .controlLiquidity-footerCopy {
+    width: 100%;
+  }
+
+  .footerInner {
     flex-wrap: wrap;
-}
-.footerNav {
+  }
+
+  .footerNav {
     width: 100%;
     margin-top: 30px;
-}
-.footerLogoMark {
-  width: 90px;
-}
-.footerBrandName {
+  }
+
+  .footerLogoMark {
+    width: 90px;
+  }
+
+  .footerBrandName {
     font-size: 21px;
-}
-.footerBrandTagline {
+  }
+
+  .footerBrandTagline {
     font-size: 11px;
-}
-.footerNavTitle {
+  }
+
+  .footerNavTitle {
     font-size: 18px;
-}
-.footerNavLink {
+  }
+
+  .footerNavLink {
     font-size: 11px;
-}
-.footerSocial {
+  }
+
+  .footerSocial {
     margin: 35px auto 0;
-}
-.footerBottomText {
+  }
+
+  .footerBottomText {
     font-size: 15px;
     font-weight: 100;
     margin-bottom: 20px;
     margin-top: 50px;
-}
+  }
 }
