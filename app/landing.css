@@ -43,7 +43,7 @@ button {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: #090909;
+  background: #141414;
   color: #f4f1e6;
 }
 
@@ -471,9 +471,9 @@ section.landingStatsWrap-main {
   width: 70%;
   height: 80%;
   background: radial-gradient(circle at center,
-      rgba(58, 55, 47, 0.55) 0%,
-      transparent 70%);
-  filter: blur(80px);
+      rgba(58, 55, 47, 0.3) 0%,
+      transparent 65%);
+  filter: blur(100px);
   z-index: -1;
   pointer-events: none;
 }
@@ -628,10 +628,10 @@ section.landingStatsWrap-main {
   width: 70%;
   height: 90%;
   background: radial-gradient(circle at center,
-      rgba(58, 55, 47, 0.55) 0%,
-      rgba(46, 42, 35, 0.3) 35%,
-      transparent 70%);
-  filter: blur(80px);
+      rgba(58, 55, 47, 0.28) 0%,
+      rgba(46, 42, 35, 0.15) 35%,
+      transparent 65%);
+  filter: blur(110px);
   z-index: -1;
   pointer-events: none;
 }
@@ -715,7 +715,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   width: 100%;
   padding: 50px 0 100px;
   background: linear-gradient(90deg,
-      #050505 0%,
+      #141414 0%,
       #1a1a1a 40%,
       #2e2a23 70%,
       #3E3A31 100%);
@@ -1108,7 +1108,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
 .controlLiquidity {
   position: relative;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #141414;
   color: #f5f4ef;
   padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 4vw, 4rem);
   min-height: min(70vh, 520px);
@@ -1248,7 +1248,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
   margin: 0 auto 0;
   width: 100%;
   padding: 3.25rem 0 4.5rem;
-  background: radial-gradient(circle at 0% 0%, #3E3A31 0%, #050505 55%);
+  background: radial-gradient(circle at 0% 0%, #3E3A31 0%, #141414 55%);
 }
 
 .clientReview-inner {
@@ -1571,7 +1571,7 @@ article.whoWeLogoCard:hover .whoWeLogoName {
     width: min(88vw, 300px);
     z-index: 201;
     padding: 1rem 1.25rem 1.5rem;
-    background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
+    background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%);
     border-left: 1px solid rgba(216, 193, 143, 0.22);
     box-shadow: -16px 0 48px rgba(0, 0, 0, 0.55);
     transform: translateX(100%);
