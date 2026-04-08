@@ -16,7 +16,7 @@ const teamMembers = [
     class: "aboutAvatarFounderClass",
     social: "x",
     icon: "images/team_b.png",
-    socialHref: "https://x.com/alaouigrowth",
+    socialHref: "https://x.com/alaouicapital",
   },
   {
     id: "right",

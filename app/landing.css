@@ -662,7 +662,8 @@ section.landingStatsWrap-main {
 .whoWeGrid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px 6.25px;
 }
 
 article.whoWeLogoCard {

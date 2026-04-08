@@ -5,12 +5,11 @@ const partnerLogos = [
   { name: "1inch", path: "/images/worked_2.png", bg: "whoWeLogoB" },
   { name: "Tutorial", path: "/images/worked_3.png", bg: "whoWeLogoC" },
   { name: "Fetch.ai", path: "/images/worked_4.png", bg: "whoWeLogoD" },
+  { name: "Theoriq", path: "/images/worked_10.png", bg: "whoWeLogoJ" },
   { name: "Quack AI", path: "/images/worked_5.png", bg: "whoWeLogoE" },
-  { name: "Defi App", path: "/images/worked_6.png", bg: "whoWeLogoF" },
   { name: "WLFI", path: "/images/worked_7.png", bg: "whoWeLogoG" },
   { name: "GiggleFund", path: "/images/worked_8.png", bg: "whoWeLogoH" },
   { name: "Plasma", path: "/images/worked_9.png", bg: "whoWeLogoI" },
-  { name: "Theoriq", path: "/images/worked_10.png", bg: "whoWeLogoJ" },
 ];
 
 export default function WhoWe() {
